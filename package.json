@@ -1,0 +1,29 @@
+{
+  "name": "semana3-20210927",
+  "version": "1.0.0",
+  "description": "Proyecto UCreativa Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u-creativa/tecnicas-modernas-automatizacion.git"
+  },
+  "keywords": [
+    "ucreativa",
+    "cypress"
+  ],
+  "author": "Marco Sanabria marco.sanabria@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/u-creativa/tecnicas-modernas-automatizacion/issues"
+  },
+  "homepage": "https://github.com/u-creativa/tecnicas-modernas-automatizacion#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "axios": "^0.21.4",
+    "cypress": "^8.6.0",
+    "mochawesome": "^6.3.1"
+  }
+}
