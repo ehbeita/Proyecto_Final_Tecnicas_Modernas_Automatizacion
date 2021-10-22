@@ -16,8 +16,8 @@ describe('Pay and Request Transactions Tests', () => {
             cy.intercept('POST', '/login').as('login');
             loginPage.visit();
             loginPage.typeCredentials({
-                username: Cypress.env('margarettaUser'),
-                password: Cypress.env('margarettaPassword'),
+                username: Cypress.env('clairUser'),
+                password: Cypress.env('clairPassword'),
             });
             loginPage.clickSignIn();
             cy.wait('@login');

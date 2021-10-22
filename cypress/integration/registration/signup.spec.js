@@ -20,9 +20,9 @@ describe('SignUp Tests', () => {
                 signUpPage.typeNewUserInformation({
                     firstName: "Esteban",
                     lastName: "Hernandez",
-                    username: "Esteban_Hdz",
-                    password: "p@ss!23",
-                    confirmPassword: "p@ss!23",
+                    username:  Cypress.env('EstebanUser'),
+                    password:  Cypress.env('EstebanPassword'),
+                    confirmPassword: Cypress.env('EstebanPassword'),
                 });
                 signUpPage.ClickSignUp();
                 cy.wait('@signup');
@@ -53,7 +53,7 @@ describe('SignUp Tests', () => {
             });
 
             it('User cannot Sign up - Only Username', () => {
-                signUpPage.typeNewUserInformation({ lastName: "Esteban_Hdz", });
+                signUpPage.typeNewUserInformation({ username: "Esteban_Hdz", });
                 signUpPage.getElements().getSignUpButton().should('not.be.enabled');
             });
 

@@ -3,16 +3,6 @@
 import { loginPage } from '../../page-objects/login-page';
 
 describe('Login Tests', () => {
-  /*context('Login through API', () => {
-    beforeEach(() => {
-      cy.apiLogin(Cypress.env('margarettaUser'), Cypress.env('margarettaPassword'));
-    });
-
-    it('should navigate to bank accounts', () => {
-      cy.visit('/bankaccounts');
-      cy.get('[data-test="bankaccount-new"]').and('be.visible').click();
-    });
-  });*/
 
   context('Login through UI', () => {
     // Hooks
@@ -26,13 +16,13 @@ describe('Login Tests', () => {
       
       it('User Logs in successfully', () => {
         loginPage.typeCredentials({
-          username: Cypress.env('margarettaUser'),
-          password: Cypress.env('margarettaPassword'),
+          username: Cypress.env('clairUser'),
+          password: Cypress.env('clairPassword'),
         });
         loginPage.clickSignIn();
         cy.wait('@login');
         cy.url().should('include', '/');
-        cy.contains(Cypress.env('margarettaUser')).should('be.visible');
+        cy.contains(Cypress.env('clairUser')).should('be.visible');
       });
     });
 
@@ -43,12 +33,12 @@ describe('Login Tests', () => {
       });
 
       it('User cannot Log in - Only Username', () => {
-        loginPage.typeCredentials({ username: Cypress.env('margarettaUser') });
+        loginPage.typeCredentials({ username: Cypress.env('clairUser') });
         loginPage.getElements().getSignInButton().should('not.be.enabled');
       });
 
       it('User cannot Log in - Only Password', () => {
-        loginPage.typeCredentials({ password: Cypress.env('margarettaPassword') });
+        loginPage.typeCredentials({ password: Cypress.env('clairPassword') });
         loginPage.getElements().getSignInButton().should('be.enabled');
         loginPage.clickSignIn();
         cy.wait('@login');

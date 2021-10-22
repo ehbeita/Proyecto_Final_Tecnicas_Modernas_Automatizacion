@@ -78,8 +78,8 @@ describe('Bank Account Tests', () => {
       cy.intercept('POST', '/graphql').as('bankaccounts');
       loginPage.visit();
       loginPage.typeCredentials({
-        username: Cypress.env('margarettaUser'),
-        password: Cypress.env('margarettaPassword'),
+        username: Cypress.env('clairUser'),
+        password: Cypress.env('clairPassword'),
       });
       loginPage.clickSignIn();
       cy.wait('@login');

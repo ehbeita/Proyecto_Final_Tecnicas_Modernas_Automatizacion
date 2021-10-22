@@ -2,10 +2,10 @@
 
 class TransactionDetailsPage {
 
-    url = '/transaction/';
+    url = '/transaction/'+Cypress.env('transactionId');
     elements = {
-        getCommentInput: () => cy.get('[id^=local-transaction-comment-input-]'),
-        getLikeIcon: () => cy.get('[id^=transaction-like-button-]'),
+        getCommentInput: () => cy.get('#transaction-comment-input-'+Cypress.env('transactionId')),
+        getLikeIcon: () => cy.get('[data-test="transaction-like-button-'+Cypress.env('transactionId')+'"]'),
         getCommentsList: () => cy.get('[data-test="comments-list"]')
     }
 

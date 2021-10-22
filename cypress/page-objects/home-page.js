@@ -20,7 +20,9 @@ class HomePage {
     }
 
     clickTransaction() {
-      this.elements.getTransactionsList().first().click();
+      this.elements.getTransactionsList()
+      .get('[data-test="transaction-item-'+Cypress.env('transactionId')+'"]')
+      .click({force : true});
     }
   
   }
