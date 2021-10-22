@@ -15,8 +15,8 @@ describe('Bank Account Tests', () => {
       cy.intercept('POST', '/graphql').as('bankaccounts');
       loginPage.visit();
       loginPage.typeCredentials({
-        username: Cypress.env('margarettaUser'),
-        password: Cypress.env('margarettaPassword'),
+        username: Cypress.env('clairUser'),
+        password: Cypress.env('clairPassword'),
       });
       loginPage.clickSignIn();
       cy.wait('@login');
@@ -103,8 +103,7 @@ describe('Bank Account Tests', () => {
       
       it('User cannot delete a bank account - no active accounts', () => {
         cy.url().should('include', bankAccountsPage.getUrl());
-        bankAccountsPage.getElements().getBankAccountsList().scrollIntoView()
-        .contains('Delete')
+        bankAccountsPage.getElements().getDeleteButtons()
         .should('not.exist');
       })
         
