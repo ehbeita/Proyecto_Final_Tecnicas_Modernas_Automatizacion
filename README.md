@@ -5,9 +5,9 @@ con el comando "yarn install" y correr la aplicacion con el comando "yarn dev" p
 
 Tambien contar con node instalado.
 
-Para ejecutar las pruebas:
+Para ejecutar las pruebas de este proyecto:
 
-Usar el comando "./node_modules/bin/cypress open" o "cy:open" en la terminal para abrir el Cypress Test Runner y ejecutar las pruebas localmente.
+Usar el comando "./node_modules/bin/cypress open" o "cy:open" en la terminal del proyecto para abrir el Cypress Test Runner y ejecutar las pruebas localmente.
 
 Ejecutar prueba #1: Crear usuario
 
