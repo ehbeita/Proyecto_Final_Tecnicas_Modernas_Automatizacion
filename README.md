@@ -1,6 +1,6 @@
 # Proyecto_Final_Tecnicas_Modernas_Automatizacion
 
-Para correr el proyecto y sus pruebas, sera necesario haber clonado o descargado la aplicacion cypress-realworld-app, asi como en el shell instalar 
+Para correr el proyecto y sus pruebas, sera necesario haber clonado o descargado la aplicacion cypress-realworld-app (https://github.com/Maximus1285/cypress-realworld-app), asi como en el shell instalar 
 con el comando "yarn install" y correr la aplicacion con el comando "yarn dev" para levantar la aplicacion.
 
 Tambien contar con node instalado.
